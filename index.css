@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1b244a;
+  height: 385px;
+  width: 575px;
+}
+
+.home,
+.guest {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* keep text/score/buttons centered */
+  gap: 15px; /* equal space between h3, score, and buttons */
+}
+h3 {
+  color: #eeeeee;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.score {
+  text-align: center;
+  line-height: 120px;
+  background-color: black;
+  height: 120px;
+  width: 155px;
+  color: #f94f6d;
+  font-family: CursedTimer;
+  font-size: 90px;
+}
+
+/* buttons row */
+.btns {
+  display: flex;
+  justify-content: space-between;
+  width: 155px;
+}
+
+.score-btn {
+  font-family: CursedTimer;
+  height: 45px;
+  width: 45px;
+  border: 2px solid #9aabd8;
+  border-radius: 5px;
+  background-color: #1b244a;
+  color: #9aabd8;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "CursedTimer";
+  src: url("/CursedTimerUlil.ttf") format("truetype");
+}
+
+.score-btn:active {
+  transform: scale(0.95); /* makes it shrink slightly */
+  background: #cccccc; /* optional: darker background while pressed */
+}
+
+.score-btn.pressed {
+  transform: scale(0.95);
+  background: #cccccc;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column; /* stack container + button */
+  align-items: center; /* keep everything centered */
+  gap: 20px; /* space between game area and button */
+}
+
+.new-game {
+  border: 2px solid #eeeeee;
+  border-radius: 6px;
+  background: #f94f6d;
+  color: #fff;
+  font: inherit;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.new-game:active {
+  transform: scale(0.95);
+}
